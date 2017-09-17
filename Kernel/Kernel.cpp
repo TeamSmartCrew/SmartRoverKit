@@ -20,22 +20,5 @@ void SMTK::begin(int b = 115200)
 void SMTK::loop(void)
 {
   // Update all motors
-  if (SMTK::mList.next != null)
-  {
-    motorList ml;
-    ml.motor = SMTK::mList.motor;
-    ml.next = SMTK::mList.next;
-    while (ml.next != null)
-    {
-      ml.motor->update();
-      
-      ml = *ml.next;
-    }
-  }
-}
-
-struct SMTK::motorList
-{
-  RBD::Motor* motor;
-  const SMTK::motorList* next;
+  
 }
