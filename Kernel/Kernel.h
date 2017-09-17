@@ -11,7 +11,6 @@
 
 typedef namespace SmartKernelForRover {
   int baud;
-  motorList mList;
   vector<int> usedPins;
   
   // Kernel functions
