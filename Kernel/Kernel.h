@@ -18,8 +18,6 @@ typedef namespace SmartKernelForRover {
   void begin(int b = 115200);
   void loop(void);
   
-  struct motorList;
-  
   // Driver implementations
   
   
