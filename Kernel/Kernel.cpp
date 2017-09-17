@@ -1,10 +1,4 @@
-#include "Arduino.h"
 #include "Kernel.h"
-#include <RBD_Motor.h>
-#include <RBD_Timer.h>
-#include <MPU6050.h>
-#include <I2Cdev.h>
-#include <Newping.h>
 
 /*
 * Starts the kernel
@@ -26,11 +20,11 @@ void SMTK::begin(int b = 115200)
 void SMTK::loop(void)
 {
   // Update all motors
-  if (mList.next != null)
+  if (SMTK::mList.next != null)
   {
     motorList ml;
-    ml.motor = mList.motor;
-    ml.next = mList.next;
+    ml.motor = SMTK::mList.motor;
+    ml.next = SMTK::mList.next;
     while (ml.next != null)
     {
       ml.motor->update();
